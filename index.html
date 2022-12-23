@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="landing.css">
+    <link target="_blank" rel="noreferrer">
+    <title>DIU-KSC</title>
+</head>
+<body>
+    <div class="main">
+      <header>
+        <nav class="top-nav">
+            <a class="logo" href="#">DIU-KSC</a>
+          <div class="lists-container" id="lists-container">
+            <ul class="link-list" id="link-list">
+                <li><a href="#" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#um" onclick="toggleMenu()">User Manual</a></li>   
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="terms&conditions.html" onclick="toggleMenu()">T&C</a></li>
+            </ul>
+          </div>
+          <button class="btn menu-btn" id="menu-btn"><i class="fa fa-bars"></i></button>
+          <button class="btn close-btn" id="close-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </nav>
+    </header>
+        <div class="row">
+            <div class="column">
+              <div class="content">
+                <h2>DIU KSC</h2>
+               <a href="main.html"><button id="gs">Get Started</button></a>
+              </div>  
+            </div>
+            <div class="column">
+              <img src="hero.png" alt="">
+            </div>
+          </div>
+    </div>
+    <div id="um" class="htu">
+      <div class="row">
+        <div class="column2">
+          <div class="content2">
+            <img src="ug.png" alt="">
+          </div>  
+        </div>
+        <div class="column2">
+          <h3>How to use:</h3>
+          <ul>
+            <li>Step 1:
+              <ul>
+              <li>Click <a href="#"><strong style="color: #200122;">Get Started</strong></a> from avobe.</li>
+              </ul>
+            </li>
+            <li>Step 2:
+              <ul>
+              <li>Select your Facultie.</li>
+              </ul>
+            </li>
+            <li>Step 3:
+              <ul>
+              <li>Select your Department.</li>
+              </ul>
+            </li>
+            <li>Step 4:
+              <ul>
+              <li>Now enter your course code and select Mid/Final to get previous question paper whatever you want.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="contact">
+      <div class="row">
+        <div class="column3">
+          <div class="con-us">
+            <h1>Contact Us</h1>
+            <div class="container">
+              <form action="/action_page.php">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+                <label for="name">Student ID</label>
+                <input type="text" id="name" name="name" placeholder="Your Student ID">
+                <label for="file">File</label>
+                <input type="file" id="file" name="file" placeholder="Your name..">
+                <label for="subject">Message</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+           
+          </div>  
+        </div>
+        <div class="column3">
+          <img src="cu.png" alt="">
+        </div>
+      </div>
+    </div>
+  <footer>
+    <h5 style="margin-top: 0%;">DIU-KSC ©2022 DIU KSC.All Rights Reserved.</h5>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-btn");
+const listsContainer = document.getElementById("lists-container");
+
+// Add an event listener to the menu & close buttons:
+menuBtn.addEventListener("click", toggleMenu);
+closeBtn.addEventListener("click", toggleMenu);
+
+// Define the toggleMenu() function
+function toggleMenu() {
+  listsContainer.classList.toggle("open");
+  menuBtn.classList.toggle("hidden");
+  closeBtn.classList.toggle("visible");
+}
+  </script>
+</body>
+
+
+</html>
